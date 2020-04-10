@@ -11,21 +11,16 @@ const particleOptions = {
     interactivity: {
         detect_on: "window",
         events: {
-        onhover: {
-            enable: true,
-            mode: "repulse"
-        },
-        onclick: {
-            enable: true,
-            mode: "push"
-        }
-
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            }
         },
         modes: {
-        repulse: {
-            "distance": 125,
-            "duration": 0.4
-        }
+            repulse: {
+                "distance": 125,
+                "duration": 0.4
+            }
         }
     }
 }
