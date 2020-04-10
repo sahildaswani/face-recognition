@@ -6,3 +6,15 @@
     background-color: slategray;
     background-size:75px 100px;
 }
+
+@media only screen and (max-width: 720px) {
+    .imageFormDiv {
+        width: 96vw;
+    }
+    #btn {
+        width: 40%;
+    }
+    #input {
+        width: 60%;
+    }
+}

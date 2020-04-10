@@ -17,7 +17,6 @@ const AddFaceBox = (box) => {
         for (const key in box) {
             if (box.hasOwnProperty(key)) {
                 const element = box[key];
-                console.log(element)
             result.push(<div className="bounding-box" style={{top: element.topRow, left: element.leftCol, right: element.rightCol, bottom: element.bottomRow}}></div>)
             }
         }
