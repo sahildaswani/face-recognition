@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/face-recognition/static/css/main.9cfa1e61.chunk.css",
-    "main.js": "/face-recognition/static/js/main.1e5a4154.chunk.js",
-    "main.js.map": "/face-recognition/static/js/main.1e5a4154.chunk.js.map",
+    "main.css": "/face-recognition/static/css/main.00a722ec.chunk.css",
+    "main.js": "/face-recognition/static/js/main.4503232e.chunk.js",
+    "main.js.map": "/face-recognition/static/js/main.4503232e.chunk.js.map",
     "runtime-main.js": "/face-recognition/static/js/runtime-main.1810cf19.js",
     "runtime-main.js.map": "/face-recognition/static/js/runtime-main.1810cf19.js.map",
     "static/css/2.3b6f1bda.chunk.css": "/face-recognition/static/css/2.3b6f1bda.chunk.css",
     "static/js/2.def08313.chunk.js": "/face-recognition/static/js/2.def08313.chunk.js",
     "static/js/2.def08313.chunk.js.map": "/face-recognition/static/js/2.def08313.chunk.js.map",
     "index.html": "/face-recognition/index.html",
-    "precache-manifest.293d721bb403cc18e8137471418275fd.js": "/face-recognition/precache-manifest.293d721bb403cc18e8137471418275fd.js",
+    "precache-manifest.140614346045c169e5a121693daaee7f.js": "/face-recognition/precache-manifest.140614346045c169e5a121693daaee7f.js",
     "service-worker.js": "/face-recognition/service-worker.js",
     "static/css/2.3b6f1bda.chunk.css.map": "/face-recognition/static/css/2.3b6f1bda.chunk.css.map",
-    "static/css/main.9cfa1e61.chunk.css.map": "/face-recognition/static/css/main.9cfa1e61.chunk.css.map",
+    "static/css/main.00a722ec.chunk.css.map": "/face-recognition/static/css/main.00a722ec.chunk.css.map",
     "static/js/2.def08313.chunk.js.LICENSE.txt": "/face-recognition/static/js/2.def08313.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1810cf19.js",
     "static/css/2.3b6f1bda.chunk.css",
     "static/js/2.def08313.chunk.js",
-    "static/css/main.9cfa1e61.chunk.css",
-    "static/js/main.1e5a4154.chunk.js"
+    "static/css/main.00a722ec.chunk.css",
+    "static/js/main.4503232e.chunk.js"
   ]
 }
