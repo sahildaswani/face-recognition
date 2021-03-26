@@ -24,7 +24,14 @@ class App extends Component {
       imgURL: '',
       box: null,
       route:'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: "",
+        name: '',
+        email: '',
+        entries: 0,
+        joined: ''
+      }
     };
   }
 
@@ -36,6 +43,20 @@ class App extends Component {
     this.setState({imgURL: this.state.input})
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
       .then(response => {
+        if (response) {
+          fetch('https://guarded-chamber-77154.herokuapp.com/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              id: this.state.user.id
+            })
+          })
+          .then(response => response.json())
+          .then(count => {
+            console.log(count)
+            this.setState(Object.assign(this.state.user, { entries: count}))
+          })
+        }
         this.displayFaceBox(this.calculateFaceLocation(response));
       })
       .catch(() => {
@@ -78,6 +99,16 @@ class App extends Component {
     this.setState({box: box})
   }
   
+  loadUser = (data) => {
+    this.setState({user: {
+      id: data.id,
+      name: data.name,
+      email: data.email,
+      entries: data.entries,
+      joined: data.joined
+    }})
+  }
+
   onRouteChange = (route) => {
     this.setState({route: route}, () => {
       if (route === "signin" || route === "register"){
@@ -91,16 +122,16 @@ class App extends Component {
   navigateRoute = (route) => {
     switch (route) {
       case 'signin':
-        return <SignIn onRouteChange={this.onRouteChange}/>
+        return <SignIn onRouteChange={this.onRouteChange} loadUser={this.loadUser}/>
       
       case 'register':
-        return <Register onRouteChange={this.onRouteChange}/>
+        return <Register onRouteChange={this.onRouteChange} loadUser={this.loadUser}/>
 
       default:
         return(
           <div>
             <Logo />
-            <Rank />
+            <Rank name={this.state.user.name} entries={this.state.user.entries}/>
             <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
             <FaceRecognition imgURL={this.state.imgURL} box={this.state.box}/>
           </div>

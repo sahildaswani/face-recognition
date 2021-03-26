@@ -12,7 +12,7 @@ const particleOptions = {
         detect_on: "window",
         events: {
             onhover: {
-                enable: true,
+                enable: false,
                 mode: "repulse"
             }
         },
